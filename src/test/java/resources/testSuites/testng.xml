@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Insider" verbose="1" >
+    <parameter name="browser"  value="chrome-headless"/>
+    <test name="insiderQAPageTest">
+        <classes>
+            <class name="tests.insiderQAPageTest"/>
+        </classes>
+    </test>
+</suite>
+
