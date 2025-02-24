@@ -5,7 +5,7 @@
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
         <listener class-name="util.AllureReportListener"/>
     </listeners>
-    <parameter name="browser"  value="chrome-headless"/>
+    <parameter name="browser"  value="Chrome"/>
     <test name="insiderQAPageTest">
         <classes>
             <class name="tests.insiderQAPageTest"/>

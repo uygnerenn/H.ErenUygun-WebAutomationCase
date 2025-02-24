@@ -14,7 +14,7 @@ public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    // Helper Sınıfları
+
     protected ActionsHelper actionsHelper;
     protected PopupHandler popupHandler;
     protected AssertHelper assertHelper;
@@ -28,7 +28,7 @@ public class BasePage {
     protected WaitHelper waitHelper;
     protected jsHelper javaScriptExecutorHelper;
 
-    // Constructor - WebDriver'ı alıp tüm helper sınıflarını başlatır
+
     public BasePage(WebDriver driver) {
 
         PageFactory.initElements(DriverFactory.getDriver(), this);
@@ -36,7 +36,7 @@ public class BasePage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
 
-        // Helper sınıflarını başlatma
+
         this.actionsHelper = new ActionsHelper(driver);
         this.popupHandler = new PopupHandler(driver);
         this.assertHelper = new AssertHelper(driver);
@@ -60,7 +60,7 @@ public class BasePage {
 
     public void urlControl(String url) {
         try {
-            Thread.sleep(2000); // 2 saniye bekle
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
