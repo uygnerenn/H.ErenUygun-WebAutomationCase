@@ -1,0 +1,11 @@
+"DESCRİPTİON","DURATİON İN MS","NAME","PARENT SUİTE","START TİME","STATUS","STOP TİME","SUB SUİTE","SUİTE","TEST CLASS","TEST METHOD"
+"Select the “Company” menu in the navigation bar, select “Careers” and check Career
+page, its Locations, Teams, and Life at Insider blocks are open or not","3507","CareersPage","Insider","Mon Feb 24 11:09:54 TRT 2025","passed","Mon Feb 24 11:09:58 TRT 2025","tests.insiderQAPageTest","insiderQAPageTest","tests.insiderQAPageTest","CareersPage"
+"Visit https://useinsider.com/ and check Insider home page is opened or not","851","TheUserNavigatesToInsider","Insider","Mon Feb 24 11:09:49 TRT 2025","passed","Mon Feb 24 11:09:50 TRT 2025","tests.insiderQAPageTest","insiderQAPageTest","tests.insiderQAPageTest","TheUserNavigatesToInsider"
+"Go to https://useinsider.com/careers/quality-assurance/, click “See all QA jobs”, filter
+jobs by Location: “Istanbul, Turkey”, and Department: “Quality Assurance”, check the
+presence of the jobs list","26156","QAJobsPage","Insider","Mon Feb 24 11:10:01 TRT 2025","passed","Mon Feb 24 11:10:27 TRT 2025","tests.insiderQAPageTest","insiderQAPageTest","tests.insiderQAPageTest","QAJobsPage"
+"Check that all jobs’ Position contains “Quality Assurance”, Department contains
+“Quality Assurance”, and Location contains “Istanbul, Turkey”","15752","QAJobsCheck","Insider","Mon Feb 24 11:10:31 TRT 2025","passed","Mon Feb 24 11:10:47 TRT 2025","tests.insiderQAPageTest","insiderQAPageTest","tests.insiderQAPageTest","QAJobsCheck"
+"Click the “View Role” button and check that this action redirects us to the Lever
+Application form page","24509","leverApplicationFormCheck","Insider","Mon Feb 24 11:10:53 TRT 2025","passed","Mon Feb 24 11:11:17 TRT 2025","tests.insiderQAPageTest","insiderQAPageTest","tests.insiderQAPageTest","leverApplicationFormCheck"

@@ -50,15 +50,21 @@ public class insiderQAPage extends BasePage {
 
     public void insiderPageCheck( ){
         String WhyInsider = "Why Insider";
-        AssertHelper.assertTextContains(pageCheck, WhyInsider); //sayfanın açıldığı teyit edildi
-        ButtonHelper.clickButton(acceptCookies);    //cookie kabul butonuna tıklandı
+        //page opened confirmed
+        AssertHelper.assertTextContains(pageCheck, WhyInsider);
+        //cookie acceptance button clicked
+        ButtonHelper.clickButton(acceptCookies);
+
 
     }
 
     public void companyMenuWay(){
+        //Click on the company button in the navigation bar
         ButtonHelper.clickButton(companyMenu);
+        //Click on the career button under the company in the navigation bar
         ButtonHelper.clickButton(careersMenu);
         jsHelper.waitForPageLoad();
+        //its Locations, Teams, and Life at Insider blocks checked
         ActionsHelper.moveToElement(seeAllTeamsBttn);
         AssertHelper.assertTextContains(seeAllTeamsBttn,"See all teams");
         ActionsHelper.moveToElement(ourLocationsLine);
@@ -68,31 +74,41 @@ public class insiderQAPage extends BasePage {
     }
 
      public void qaJobsPage(){
+        //The specified url was visited
         driver.get("https://useinsider.com/careers/quality-assurance/");
+        //the presence of all Qa Jobs buttons is checked and clicked.
         AssertHelper.assertElementIsEnabled(seeAllQaJobsBttn);
         ButtonHelper.clickButton(seeAllQaJobsBttn);
-        WaitHelper.waitForDropdownOptionsToLoad(QATitle, 30);
+        //Waits until drop down lists are loaded
+        WaitHelper.waitForDropdownOptionsToLoad(QATitle, 45);
+        //Performs selection in drop down lists
         ButtonHelper.clickButton(filterByLocation);
         RadioButtonHelper.selectRadioButton(chooseLocation);
         ButtonHelper.clickButton(filterByDepartment);
         RadioButtonHelper.selectRadioButton(chooseDepartment);
+        //move to the work list tab
         ActionsHelper.moveToElement(jobList);
 
      }
 
      public void qaJobsCheck(){
         jsHelper.waitForPageLoad();
+        //Waits until text appears
         WaitHelper.waitForText(positionDepartment, "Quality Assurance");
+        //Check that all jobs’ Position contains “Quality Assurance”, Department contains “Quality Assurance”, and Location contains “Istanbul, Turkey”
         AssertHelper.assertListEqualsMultipleText(positionTitle, "Quality Assurance" , "QA");
         AssertHelper.assertListEquals(positionDepartment, "Quality Assurance");
         AssertHelper.assertListEquals(positionLocation, "Istanbul, Turkiye");
      }
 
      public void leverApplicationForm(){
+        //Go to the first job in the list and click
         WaitHelper.waitForText(positionDepartment, "Quality Assurance");
         ActionsHelper.hoverOverElement(viewRoleBttn);
         jsHelper.clickElement(viewRoleBttn);
+        //Check that you are on the right tab
         BrowserHelper.switchToWindow(1);
+         //Check that you are on the right page
         AssertHelper.assertUrlContains("https://jobs.lever.co/useinsider/");
         AssertHelper.assertTextContains(leverTitleCheck,"Senior Software Quality Assurance Engineer");
 
